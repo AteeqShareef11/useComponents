@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import { Marketing } from "./Marketing/utils";
 
 const page = () => {
   return (
@@ -8,8 +9,8 @@ const page = () => {
         <h1>Page Section</h1>
       </div>
       <div className="flex flex-wrap gap-4 w-[80%]">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((item) => (
-          <Card />
+        {Marketing.map((item) => (
+          <Card item={item} />
         ))}
       </div>
     </div>

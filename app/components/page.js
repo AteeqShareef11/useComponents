@@ -222,7 +222,7 @@ export default function page() {
       <Container>
         <FeaturesMobile />
         <FeaturesDesktop />
-        <WithLineNumbers />
+        {/* <WithLineNumbers /> */}
       </Container>
     </section>
   );

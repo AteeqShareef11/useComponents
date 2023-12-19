@@ -1,14 +1,19 @@
+"use client";
+import { useRouter } from "next/navigation";
 import React from "react";
 
-const Card = () => {
+const Card = ({ item }) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/components/section?data=${item.id}`);
+  };
+
   return (
-    <div className="flex w-56 h-60 flex-col gap-4">
-      <img
-        src="https://tailwindui.com/img/category-thumbnails/marketing/heroes.png"
-        alt=""
-      />
-      <h1>Hero Section</h1>
-      <p>12 components</p>
+    <div className="flex w-56 h-60 flex-col gap-4" onClick={handleClick}>
+      <img src={item.image} alt="" />
+      <h1>{item.name}</h1>
+      <p>{item.noOfComponents} components</p>
     </div>
   );
 };
