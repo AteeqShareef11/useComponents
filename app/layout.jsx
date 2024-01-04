@@ -47,7 +47,6 @@ export default function RootLayout({ children }) {
       </head>
       <body className={clsx('h-full scroll-smooth bg-white antialiased', inter.variable, lexend.variable)}>
         <div className="flex flex-col h-screen">
-          <Header />
           {children}
         </div>
       </body>

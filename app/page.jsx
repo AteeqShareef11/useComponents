@@ -1,3 +1,4 @@
+import HomeLayout from '../components/shared/HomeLayout'
 import { CallToAction } from '../components/CallToAction'
 import { Faqs } from '../components/Faqs'
 import { Footer } from '../components/Footer'
@@ -12,15 +13,16 @@ export default function Home() {
   return (
     <>
       <main>
-        <Hero />
-        <PrimaryFeatures />
-        <SecondaryFeatures />
-        <CallToAction />
-        <Testimonials />
-        <Pricing />
-        <Faqs />
+        <HomeLayout>
+          <Hero />
+          <PrimaryFeatures />
+          <SecondaryFeatures />
+          <CallToAction />
+          <Testimonials />
+          <Pricing />
+          <Faqs />
+        </HomeLayout>
       </main>
-      <Footer />
     </>
   )
 }

@@ -11,6 +11,7 @@ import screenshotInventory from "../../images/screenshots/inventory.png";
 import screenshotProfitLoss from "../../images/screenshots/profit-loss.png";
 import Marketing from "../../components/Marketing";
 import WithLineNumbers from "../../components/WithLineNumbers";
+import HomeLayout from "../../components/shared/HomeLayout";
 
 const features = [
   {
@@ -214,16 +215,19 @@ function FeaturesDesktop() {
 
 export default function page() {
   return (
-    <section
-      id="secondary-features"
-      aria-label="Features for simplifying everyday business tasks"
-      className=""
-    >
-      <Container>
-        <FeaturesMobile />
-        <FeaturesDesktop />
-        {/* <WithLineNumbers /> */}
-      </Container>
-    </section>
+    <HomeLayout>
+      <section
+        id="secondary-features"
+        aria-label="Features for simplifying everyday business tasks"
+        className=""
+      >
+        <Container>
+          <FeaturesMobile />
+          <FeaturesDesktop />
+
+          {/* <WithLineNumbers /> */}
+        </Container>
+      </section>
+    </HomeLayout>
   );
 }
